@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha B S | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top controls -->
+  <div class="topbar">
+    <div class="brand">Sneha B S</div>
+    <div class="topbar-actions">
+      <button id="editToggleBtn" class="btn secondary">Edit Mode</button>
+      <button id="saveBtn" class="btn primary">Save Changes</button>
+      <label for="photoUpload" class="btn secondary small-btn">Change Photo</label>
+      <input type="file" id="photoUpload" accept="image/*" hidden />
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <h2 class="logo">SB</h2>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <!-- HERO -->
+    <section id="home" class="hero card">
+      <div class="hero-text">
+        <p class="eyebrow editable" data-key="heroEyebrow">HELLO, I’M</p>
+        <h1 class="editable" data-key="heroName">Sneha B S</h1>
+        <h2 class="hero-subtitle editable" data-key="heroTitle">
+          Electrical & Electronics Engineering Student | Aspiring Researcher | Builder of Intelligent Systems
+        </h2>
+        <p class="hero-desc editable" data-key="heroDesc">
+          I’m passionate about VLSI, embedded systems, intelligent computing, and practical engineering design. I enjoy building projects that connect electronics, programming, and real-world problem solving.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="photo-card">
+          <img id="profileImage" src="" alt="Profile photo" class="profile-image hidden" />
+          <div id="photoPlaceholder" class="photo-placeholder">
+            <span>Add Your Photo Here</span>
+            <small>Use the “Change Photo” button above</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card section">
+      <div class="section-head">
+        <p class="section-tag">01</p>
+        <h2>About Me</h2>
+      </div>
+      <div class="section-body">
+        <p class="editable" data-key="aboutText">
+          I’m Sneha B S, a second-year Electrical and Electronics Engineering student passionate about VLSI, embedded systems, intelligent computing, and practical engineering design. I enjoy building projects that connect electronics, programming, and real-world problem solving. My learning journey currently includes C, Python, Verilog, core electronics, and the growing intersection of AI with hardware systems. I’m especially interested in research-driven work where software and electronics come together to create meaningful solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card section">
+      <div class="section-head">
+        <p class="section-tag">02</p>
+        <h2>Skills & Tools</h2>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-chip editable" data-key="skill1">C Programming</div>
+        <div class="skill-chip editable" data-key="skill2">Python</div>
+        <div class="skill-chip editable" data-key="skill3">Verilog</div>
+        <div class="skill-chip editable" data-key="skill4">HTML</div>
+        <div class="skill-chip editable" data-key="skill5">CSS</div>
+        <div class="skill-chip editable" data-key="skill6">JavaScript (Learning)</div>
+        <div class="skill-chip editable" data-key="skill7">Digital Electronics</div>
+        <div class="skill-chip editable" data-key="skill8">Problem Solving</div>
+        <div class="skill-chip editable" data-key="skill9">Technical Documentation</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card section">
+      <div class="section-head with-action">
+        <div>
+          <p class="section-tag">03</p>
+          <h2>Projects</h2>
+        </div>
+        <button id="addProjectBtn" class="btn secondary small-btn">+ Add Project</button>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid">
+        <article class="project-card">
+          <h3 class="editable">Calculator Application</h3>
+          <p class="editable">
+            Built a calculator application to perform basic arithmetic operations with a clean and user-friendly interface. Focused on logic building, structured coding, and problem solving.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3 class="editable">Energy Advisor System</h3>
+          <p class="editable">
+            Designed a concept-driven project aimed at helping users make smarter energy-related decisions through simple analysis, awareness, and recommendation logic.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3 class="editable">Portfolio Website</h3>
+          <p class="editable">
+            Developed a personal portfolio website to showcase projects, skills, achievements, and academic interests in a visually organized and editable format.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="card section">
+      <div class="section-head with-action">
+        <div>
+          <p class="section-tag">04</p>
+          <h2>Achievements & Certifications</h2>
+        </div>
+        <button id="addAchievementBtn" class="btn secondary small-btn">+ Add Achievement</button>
+      </div>
+
+      <div id="achievementList" class="timeline-list">
+        <div class="timeline-item editable">
+          Completed a C Programming course and strengthened my fundamentals in logic building, syntax, and problem solving.
+        </div>
+        <div class="timeline-item editable">
+          Built multiple beginner-to-intermediate coding exercises and mini projects to improve confidence in programming.
+        </div>
+        <div class="timeline-item editable">
+          Continuously exploring hardware-software integration, embedded systems, and digital design concepts.
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card section">
+      <div class="section-head">
+        <p class="section-tag">05</p>
+        <h2>Education</h2>
+      </div>
+
+      <div class="edu-card">
+        <h3 class="editable" data-key="eduTitle">B.Tech in Electrical & Electronics Engineering</h3>
+        <p class="editable" data-key="eduCollege">NIT Calicut</p>
+        <p class="editable" data-key="eduDesc">
+          Building a strong foundation in electronics, circuits, programming, digital systems, and emerging intelligent technologies.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card section">
+      <div class="section-head">
+        <p class="section-tag">06</p>
+        <h2>Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p class="editable" data-key="contactEmail">yourmail@example.com</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>LinkedIn</h3>
+          <p class="editable" data-key="contactLinkedin">Add your LinkedIn profile link here</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>GitHub</h3>
+          <p class="editable" data-key="contactGithub">Add your GitHub profile link here</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p class="editable" data-key="contactLocation">Kerala, India</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="editable" data-key="footerText">
+        Designed with warmth, curiosity, and ambition — Sneha B S Portfolio
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
